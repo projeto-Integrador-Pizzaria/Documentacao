@@ -52,3 +52,89 @@ _Professor_: [Marco André Mendes](github.com/marcoandre)
 <div aling="center">
   <img src="images/banco_de_ dados.png" />
 </div>
+
+## Requisitos
+
+> Criaremos um site para divulgar a pizzaria, utilizaremos um cardápio atrativo,
+em que o cliente terá a possibilidade de pesquisar os sabores desejados,
+otimizando o seu tempo. Na etapa do pedido, será possível adicionar itens
+avulsos da bomboniere, como doces e bebidas, oferecendo uma experiência
+completa. Para valorizar o consumidor, haverá um programa de fidelidade,
+registrando cada pedido feito, de modo que, quando chegar em 10, ele
+ganhará uma pizza média grátis. Desenvolveremos um sistema de entregas,
+em que o usuário poderá acompanhar seu pedido, verificando em qual estágio
+ele está (sendo preparado, saiu para a entrega e entregue).
+---
+
+#### RF001 - O sistema deve manter Usuário
+   - **RN001:** Os dados de Usuário são: CPF, nome, ID do telefone, ID do endereço, ID do e-mail, senha e nome de usuário;
+  - **RN002:** Usuário é uma generalização parcial;
+  - **RN003:** Usuário deve se relacionar com Telefone;
+  - **RN004:** Usuário deve se relacionar com Endereço;
+  - **RN005:** Usuário deve se relacionar com E-mail;
+
+
+#### RF002 - O sistema deve manter Cliente
+  - **RN006:** Os dados de Cliente são: ID do cliente, ID do endereço, CPF do usuário e ID do telefone.
+  - **RN007:** Cliente é uma especialização de Usuário.
+  - **RN008:** Cliente pode realizar vários ou nenhum pedido.
+
+#### RF003 - O sistema deve manter Funcionário
+  - **RN009:** Os dados de Funcionário são: CPF, ID do funcionário, cargo e remuneração.
+  - **RN010:** Funcionário é uma especialização de Usuário.
+
+#### RF004 - O sistema deve manter Endereço
+  - **RN011:** Os dados de Endereço são: ID, número da residência, moradia, rua, bairro, cidade, complemento.
+
+#### RF005 - O sistema deve manter Telefone
+  - **RN012:** Os dados de Telefone são: ID, DDD, número de telefone.
+
+#### RF006 - O sistema deve manter E-mail
+  - **RN013:** Os dados de E-mail são: ID e e-mail do usuário.
+
+#### RF007 - O sistema deve manter Pizza
+  - **RN014:** Os dados de Pizza são: ID, ID do tamanho, ID do sabor e ID da borda.
+  - **RN015:** Pizza deve se relacionar com Sabor.
+  - **RN016:** Pizza deve se relacionar com Tamanho.
+  - **RN017:** Pizza deve se relacionar com Borda.
+
+#### RF008 - O sistema deve manter Sabor
+  - **RN018:** Os dados de Sabor são: ID, nome, descrição e preço.
+  - **RN019:** Sabor se relaciona com Borda.
+  - **RN020:** Sabor se relaciona com Tamanho.
+  - **RN021:** Cada Sabor possui preço.
+
+#### RF009 - O sistema deve manter Borda
+  - **RN022:** Os dados de Borda são: ID, nome, descrição e preço.
+  - **RN023:** Borda se relaciona com Tamanho.
+  - **RN024:** Cada Borda possui preço.
+
+#### RF010 - O sistema deve manter Tamanho
+  - **RN025:** Os dados de Tamanho são: ID, nome, diâmetro e preço.
+  - **RN026:** Cada Tamanho possui preço.
+
+#### RF011 - O sistema deve manter Bebida
+  - **RN027:** Os dados de Bebida são: ID, nome, volume, preço e descrição.
+  - **RN028:** Cada Bebida possui preço.
+
+#### RF012 - O sistema deve manter Doce
+  - **RN029:** Os dados de Doce são: ID, nome, preço e descrição.
+  - **RN030:** Cada Doce possui preço.
+
+#### RF013 - O sistema deve manter Pedido
+  - **RN031:** Os dados de Pedido são: ID, ID da Bebida, ID do Doce, ID da pizza e ID do cliente.
+  - **RN032:** O preço final do pedido deve ter como base o tamanho da pizza, os sabores e a borda escolhida, além, se houver, da bebida e do doce.
+  - **RN033:** Pedido só existe se Cliente existir.
+
+#### RF014 - O sistema deve manter controle de Pedidos do Cliente
+  - **RN034:** Quando um Cliente fizer 10 pedidos, ele ganha uma pizza média grátis.
+
+#### RF015 - O sistema deve manter Status do Pedido
+  - **RN035:** Os dados de Status do Pedido são: ID, ID do Pedido e situação do pedido.
+
+
+#### Requisitos Não Funcionais (RNF)
+
+  - **RNF001:** O sistema deve ser responsivo.
+  - **RNF002:** O sistema deve ser desenvolvido em Vue.js.
+  - **RNF003:** O backend do sistema deve ser desenvolvido em Django.
