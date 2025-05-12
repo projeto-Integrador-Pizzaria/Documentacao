@@ -138,3 +138,36 @@ ele está (sendo preparado, saiu para a entrega e entregue).
   - **RNF001:** O sistema deve ser responsivo.
   - **RNF002:** O sistema deve ser desenvolvido em Vue.js.
   - **RNF003:** O backend do sistema deve ser desenvolvido em Django.
+
+---
+
+## Casos de Uso
+
+**1º** - *O principal produto de vendas da Pizzaria Paraíso são as pizzas e, como acontece
+naturalmente, o cliente tem a possibilidade de solicitar a produção da pizza, selecionando
+as especificações básicas, como tamanho, recheios e borda; a empresa faz os custos da
+confecção e entrega ao cliente o valor final. A principal função desenvolvida para o site foi
+justamente uma página que simula esse processo de orçamento do pedido, em que, ao
+final, o sistema indica o preço total de fabricação. Um dos requisitos formulados é de que o
+usuário possui a viabilidade de customizar a pizza, podendo colocar recheios nas bordas,
+escolher o sabor que deseja e adicionar itens a mais, como bebidas e doces.
+Sobre o cômputo, ele consiste numa série de procedimentos criados pela equipe e que se
+aproxima ao máximo dos cálculos reais da pizzaria. Por se tratar de situações muito
+intuitivas, a criação de uma fórmula teria o papel de auxiliar a transcrição desse processo
+para o código, sendo as mesmas variáveis participantes da fórmula aquelas definidas no
+Vue.js. Além disso, as operações foram escritas basicamente para o JavaScript.
+**2º** Ao realizar o processo de customização do pedido, antes do sistema informar o preço
+final, ele efetua a verificação dos dados, analisando se todos os campos obrigatórios estão
+selecionados. Caso a verificação indique que falta algo, o sistema avisa o usuário por meio
+de um campo de alerta.
+**3º** Ao realizar o procedimento de solicitar a entrega, antes do sistema confirmar o pedido,
+ele efetua a verificação dos dados, analisando se: **a)** todos os campos obrigatórios foram
+preenchidos; **b)** se o endereço indicado está na mesma cidade que a pizzaria se localiza.
+Caso a verificação indique que algo não está correto, o sistema avisa o usuário por meio de
+um campo de alerta.*
+
+## Diagrama de Caso de Uso
+
+<div aling="center">
+  <img src="images/PI-Fluxograma.png" />
+</div>
