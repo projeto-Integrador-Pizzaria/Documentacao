@@ -47,6 +47,8 @@ _Professor_: [Marco André Mendes](github.com/marcoandre)
 ## Descrição da Proposta:
   Criaremos um site para divulgar a pizzaria, utilizaremos um cardápio atrativo, em que o cliente terá a possibilidade de pesquisar os sabores desejados, otimizando o seu tempo. Na etapa do pedido, será possível adicionar itens avulsos da bomboniere, como doces e bebidas, oferecendo uma experiência completa. Para valorizar o consumidor, haverá um programa de fidelidade, registrando cada pedido feito, de modo que, quando chegar em 10, ele ganhará uma pizza média grátis. Desenvolveremos um sistema de entregas, em que o usuário poderá acompanhar seu pedido, verificando em qual estágio ele está (sendo preparado, saiu para a entrega e entregue).
 
-<div>
-  
+## Modelagem de Dados
+
+<div aling="center">
+  <img src="images/banco_de_ dados.png" />
 </div>
